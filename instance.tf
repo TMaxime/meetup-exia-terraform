@@ -12,7 +12,7 @@ resource "aws_instance" "instance-1" {
     key_name = "${var.key_pair}"
 
     tags {
-        Name = "${var.instance_tag_name}"
+        Name = "${var.instance_tag_name_1}"
     }
 }
 
@@ -31,6 +31,6 @@ resource "aws_instance" "instance-2" {
     key_name = "${var.key_pair}"
 
     tags {
-        Name = "${var.instance_tag_name}"
+        Name = "${var.instance_tag_name_2}"
     }
 }

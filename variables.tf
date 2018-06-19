@@ -17,4 +17,5 @@ variable "instance_type" {
     default = "t2.micro"
 }
 
-variable "instance_tag_name" {}
+variable "instance_tag_name_1" {}
+variable "instance_tag_name_2" {}
