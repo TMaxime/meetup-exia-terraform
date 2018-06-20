@@ -13,6 +13,10 @@ variable "subnet_tag_name" {
     description = "Tag name of the subnet"
 }
 
+variable "igw_tag_name" {
+    description = "Tag name of the internet gateway"
+}
+
 variable "rtb_cidr" {
     description = "Route table cidr"
 }
@@ -41,6 +45,10 @@ resource "aws_subnet" "public_subnet" {
 
 resource "aws_internet_gateway" "my_ig" {
     vpc_id = "${aws_vpc.main.id}"
+
+    tags {
+        Name = "${var.igw_tag_name}"
+    }
 }
 
 resource "aws_route_table" "public_route" {
